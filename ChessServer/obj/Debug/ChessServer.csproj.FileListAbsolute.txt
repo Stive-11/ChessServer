@@ -1,0 +1,2 @@
+c:\users\denis\documents\visual studio 2013\Projects\ChessServer\ChessServer\bin\Debug\ChessServer.exe.config
+C:\Users\Denis\documents\visual studio 2013\Projects\ChessServer\ChessServer\obj\Debug\ChessServer.csprojResolveAssemblyReference.cache
