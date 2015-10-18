@@ -36,6 +36,10 @@ namespace ChessClient
 
         private void BtSend_Click(object sender, RoutedEventArgs e)
         {
+            if (CheckCell(StepBegin.Text) && CheckCell(StepEnd.Text))
+            {
+                MessageBox.Show("Incorrect names of cells!");
+            } else
             if (!table.MoveFigure(StepBegin.Text, StepEnd.Text))
             {
                 MessageBox.Show("Incorrect move!");
@@ -53,5 +57,31 @@ namespace ChessClient
                 
             }
         }
+
+
+        private bool CheckCell(string s)
+        {
+            s = s.ToLower();
+            if (s.Length < 2) return true;
+            if (s[0] < 'a' || s[0] > 'h') return true;
+            if (s[1] < '1' || s[1] > 8) return true;
+            return false;
+        }
+
+
+
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+            var mes = NumberClient.ToString() + "-" + StepBegin.Text + "-" + StepEnd.Text;
+            serverConnection.SendMessage(mes);
+            ListSteps.Items.Clear();
+        }
+
+        private void Surrender_Click(object sender, RoutedEventArgs e)
+        {
+            var mes = "0" + "-" + StepBegin.Text + "-" + StepEnd.Text;
+            serverConnection.SendMessage(mes);
+        }
+
     }
 }

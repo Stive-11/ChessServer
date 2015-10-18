@@ -15,8 +15,8 @@
         <Label Content="Steps" HorizontalAlignment="Left" Margin="87,242,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="StepEnd" HorizontalAlignment="Left" Height="23" Margin="130,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="46"/>
         <TextBox Name="IPserver" HorizontalAlignment="Left" Height="23" Margin="56,37,0,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center"/>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="33,87,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Surrender" HorizontalAlignment="Left" Margin="130,87,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="33,87,0,0" VerticalAlignment="Top" Width="75" Click="Start_Click"/>
+        <Button Content="Surrender" HorizontalAlignment="Left" Margin="130,87,0,0" VerticalAlignment="Top" Width="75" Click="Surrender_Click"/>
         <Label Content="IP server" HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top"/>
         <Grid x:Name="GridTable" Margin="222,0,0,0">
             
